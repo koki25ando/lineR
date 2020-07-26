@@ -4,7 +4,7 @@
 \alias{line_task_notify}
 \title{Task end notification}
 \usage{
-line_task_notify(LINE_API_TOKEN, msg = "Task is finished.")
+line_task_notify(LINE_API_TOKEN = NULL, msg = "Task is finished.")
 }
 \arguments{
 \item{LINE_API_TOKEN}{Your valid LINE Notify api token. Recomennded to save .Renviron file.}

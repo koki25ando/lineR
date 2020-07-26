@@ -18,7 +18,7 @@
 #'
 #' @export
 
-line_task_notify <- function(LINE_API_TOKEN, msg = "Task is finished."){
+line_task_notify <- function(LINE_API_TOKEN = NULL, msg = "Task is finished."){
 
   if (is.null(LINE_API_TOKEN)){
     LINE_API_TOKEN <- Sys.getenv("LINE_API_TOKEN")
@@ -29,7 +29,7 @@ line_task_notify <- function(LINE_API_TOKEN, msg = "Task is finished."){
     length(LINE_API_TOKEN) != 0
   )
 
-  if (length(LINE_API_TOKEN) <= 1){
+  if (nchar(LINE_API_TOKEN) <= 1){
     warn_msg <- "Line Notify API has not been set successfully. \n
     Please check your LINE_API_TOKEN aurgument or .Renvirion file to set api token."
     stop(warn_msg)
