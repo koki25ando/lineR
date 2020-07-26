@@ -1,10 +1,10 @@
 # lineR
 
-lineRパッケージは[LINE Notify API](https://notify-bot.line.me/doc/ja/)を用いてRStudioからLineに通知メッセージを送る機能を提供します。パッケージ機能を利用するにはユーザー個人でAPIトークンを発行していただく必要があります。また、これらのAPIトークンはユーザー個人で保管していただく必要があり、コードに直接記載していただくことを防ぐため、.Renvironのファイル内で管理することを推奨しております。
+lineRパッケージは[LINE Notify API](https://notify-bot.line.me/doc/ja/)を用いてRStudioからLineに通知メッセージを送る機能を提供します。パッケージ機能を利用するにはユーザー個人でAPIトークンを発行していただく必要があります。また、APIトークンはユーザー個人で保管していただく必要があり、.Renvironのファイル内で`LINE_API_TOKEN`という名前で管理することを推奨しております。
 
 ## Installation
 
-現段階ではCRANに登録しておらず、開発版しかないため'devtools::install_github("koki25ando/lineR")'を実行してインストールして使用していただく形になります。
+現段階ではCRANに登録しておらず、開発版しかないため下記のコードを実行してインストールし、使用していただく形になります。
 
 ```{r}
 devtools::install_github("koki25ando/lineR")
